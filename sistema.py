@@ -25,12 +25,22 @@ while True:
             print(f'Número de cadastro: {Cadastro}\nNovo cliente cadastrado!')
 #Listar clientes
         elif opçao == 2:
-            print('Clientes cadastrados:')
-            for cliente in lista_de_clientes:
-                dados = lista_de_clientes[cliente]
-                for tipo_de_info,info in dados.items():
-                    print(f'{tipo_de_info} : {info}')
-                print(f'\n')
+            print('\nIndique o modo de exibição da lista:\nR - Mais recentes primeiro\nA - Mais antigos primeiro')
+            ordem = input('Em qual ordem deseja exibir? \n').upper()
+            if ordem == 'A':
+                print('Clientes cadastrados:\n')
+                for cliente in lista_de_clientes:
+                    dados = lista_de_clientes[cliente]
+                    for tipo_de_info,info in dados.items():
+                        print(f'{tipo_de_info} : {info}')
+                    print(f'\n')
+            if ordem == 'R':
+                print('Clientes cadastrados:\n')
+                for clientes in reversed(lista_de_clientes):
+                    dados = lista_de_clientes[clientes]
+                    for tipo_de_info,info in dados.items():
+                        print(f'{tipo_de_info} : {info}')
+                    print(f'\n')
 #Buscar clientes
         elif opçao == 3:
             num_de_cadastro = input('Por favor,digite o número do cadastro: ')
