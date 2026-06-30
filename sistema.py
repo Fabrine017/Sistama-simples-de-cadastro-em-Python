@@ -4,7 +4,7 @@ def printar_informaçoes():
     for tipo_de_info,info in dados.items():
         print(f'{tipo_de_info} : {info}')
 
-from cadastrados_json import ler_clientes, cadastrar_clientes
+from cadastrados_json import ler_cliençoestes, cadastrar_clientes
 #Início da operação
 lista_de_clientes = ler_clientes()
 #Prints iniciais

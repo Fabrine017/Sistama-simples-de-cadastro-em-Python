@@ -1,3 +1,0 @@
-from cadastrados_json import ler_clientes
-lista_de_clientes=ler_clientes()
-print(lista_de_clientes)
